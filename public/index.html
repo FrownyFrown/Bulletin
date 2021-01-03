@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<head>
+    <title> Bullet In </title>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <!-- <script src="./assets/js/login/script.js"></script> -->
+    <link rel="stylesheet" type="text/css" href="./assets/css/login/style.css">
+   
+    <!-- <link rel="shortcut icon" type="image/x-icon" href="./_Media/favicon.ico">
+    <link rel="icon" href="./_Media/favicon.ico"> -->
+    
+<!-- Chrome, Safari, IE -->
+<link rel="shortcut icon" href="./assets/images/icon/fav/favicon_T.ico" type="image/x-icon">
+ 
+<!-- Firefox, Opera (Chrome and Safari say thanks but no thanks) -->
+<link rel="icon" href="./assets/images/icon/fav/favicon_T.ico">
+    
+</head>
+<header>
+    <!-- <img scr="icon_1.png"> -->
+    <a href="./index_login.html">
+    <h1>Bullet<span>IN</span></h1>
+    </a>
+    
+    <nav>
+        <ul>
+            <div class="navigationBar">
+                <li><a href="./index_main.html">게시판</a></li>
+                <li><a href="./index_info.html">서비스 정보</a></li>
+                <li><a href="./index_userSet.html">사용자 설정</a></li>
+                <li><a href="./index_rep.html">건의/신고</a></li>
+                <li><a href="./index_updt.html">업데이트 로그</a></li>
+                <li><a href="./index_dev.html">개발정보</a></li>
+                <li><a href="./index_prof.html">개발자 프로필</a></li>
+            </div>
+        </ul>
+    </nav>
+</header>
+<body>
+    <!-- <img src="../_Media/icon7.svg" height="600px" width="600px" ondragstart="return false" class="icon1">
+    <img src="../_Media/icon5.svg" height="450px" width="450px" ondragstart="return false" class="icon2"> -->
+    <!-- <img src="../_Media/icon5.svg" height="800px" width="800px" ondragstart="return false" class="icon3">
+    <img src="../_Media/icon6.svg" height="800px" width="800px" ondragstart="return false" class="icon4"> -->
+    <div class="box">
+        <h2 id="serviceName"></h2>
+        <script>
+            //타자 효과
+            var i = 0;
+            var txt = '익명 게시판, BulletIN';
+
+            function typeWriter() {
+                if (i < txt.length) { 
+                    document.getElementById("serviceName").innerHTML += txt.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 150);
+                }
+            }
+            typeWriter();
+        </script>
+        <form>
+            <div class="inputBox">
+                <input type="email" id="email" name="" required="">
+                <label>이메일 주소</label>
+            </div>
+            <div class="inputBox">
+                <input type="password" minlength="6" id="password" name="" required="">
+                <label>비밀번호</label>
+            </div>
+            <a>
+                <!-- href="../Bulletin/index.html -->
+                <input type="button" onClick="signIn()" id="sginIn" value="로그인"></button>
+            </a>
+            <a>
+                <!-- href="../SignUp/index.html" -->
+                <input type="button" onClick="signUp()" id="signUp" value="회원가입"></button>
+            </a>
+        </form>
+    </div>
+        <!-- <button onClick="signUp()" id="signUp"> 계정 생성 <button>
+        <button onClick="signIn()" id="signIn"> 로그인 </button>
+        <button onClick="signOut()" id="signOut"> 로그아웃 </button> -->
+    </div>
+      <!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.23.0/firebase-firestore.js"></script>
+
+  <script src="./assets/js/.firebase/auth.js"></script>
+</body>
